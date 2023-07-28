@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(90deg,rgb(0, 0, 0), rgb(255, 255, 255));
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 235px;
+    height: 200px;
+}
+
+.img {
+    position: absolute;
+    left: 34px;
+    top: 300px;
+}
+
+.Solid {
+    width: 250px;
+    height: 972px;
+    background-color: rgb(255, 255, 255);
+    border-right: 35px solid #1a1900;
+    position: absolute;
+    left: -250px;
+    transition: left 1s ease;
+    animation: render 4s ease-in-out infinite;
+}
+
+.Solid p {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 36%;
+    animation: render-text 4s ease-in-out infinite;
+}
+
+.Solid:hover {
+    left: 0;
+}
+
+@keyframes render {
+    0%{
+        background-color: rgb(255, 255, 255);
+    }
+    50%{
+        background-color: rgb(0, 0, 0);
+    }
+    100%{
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes render-text {
+    0%{
+        color: rgb(0, 0, 0);
+    }
+    100%{
+        color: rgb(255, 255, 255);
+    }
+    100%{
+        color: rgb(0, 0, 0);
+    }
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    background-color: #ffffff;
+    position: relative;
+    top: 280px;
+    left: 300px;
+    animation: render-box 5s ease-out infinite;;
+}
+
+@keyframes render-box{
+    0% {
+        top: 280px; left: 300px;
+        background-color: #ffffff;
+        border-radius: 5%;
+    }
+
+    50% {
+        top: 280px; left: 600px;
+        background-color: #000000;
+        border-radius: 95%;
+    }
+
+    100% {
+        top: 280px; left: 300px;
+        background-color: #ffffff;
+        border-radius: 5%;
+    }
+}
